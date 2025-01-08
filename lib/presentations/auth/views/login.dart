@@ -88,9 +88,15 @@ class LoginView extends GetView<LoginController> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: TextButton(
-                onPressed: () => Get.toNamed(RoutesName.register),
-                child: const Text('Create an account'),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Don\'t have an account?'),
+                  TextButton(
+                    onPressed: () => Get.toNamed(RoutesName.register),
+                    child: const Text('Create an account'),
+                  ),
+                ],
               ),
             )
           ],
